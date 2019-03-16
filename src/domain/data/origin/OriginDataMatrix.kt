@@ -1,4 +1,4 @@
-package domain.data
+package domain.data.origin
 
 import domain.data.generic.Matrix
 

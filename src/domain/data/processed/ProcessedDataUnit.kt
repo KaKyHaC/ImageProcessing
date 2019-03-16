@@ -1,4 +1,4 @@
-package domain.data
+package domain.data.processed
 
 import java.math.BigInteger
 
