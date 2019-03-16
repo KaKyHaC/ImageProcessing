@@ -1,5 +1,3 @@
 package domain.data.origin
 
-class OriginDataUnit {
-
-}
+data class OriginDataUnit (val pixel: Short)
