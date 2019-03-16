@@ -3,6 +3,7 @@ package domain.data
 import java.math.BigInteger
 
 data class ProcessedDataUnit(
+    val firstElement: Int?,
     val code: BigInteger,
     val baseArray: ShortArray,
     val signMatrix: SignMatrix,
