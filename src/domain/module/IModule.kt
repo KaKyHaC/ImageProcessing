@@ -1,8 +1,6 @@
 package domain.module
 
-import domain.data.IData
-
-interface IModule {
-    fun direct(data: IData): IData
-    fun reverse(data: IData): IData
+interface IModule <InputType, OutputType>{
+   fun direct(data: InputType): OutputType
+   fun reverse(data: OutputType): InputType
 }
