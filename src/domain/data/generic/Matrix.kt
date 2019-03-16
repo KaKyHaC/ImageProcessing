@@ -12,4 +12,7 @@ open class Matrix<T> (private val data: List<MutableList<T>>) {
 
     fun getAt(i: Int, j: Int) = data[i][j]
     fun setAt(i: Int, j: Int, value: T) { data[i][j] = value}
+
+    operator fun set(i: Int, j: Int, value: T) { data[i][j] = value}
+    operator fun get(i: Int, j: Int) = data[i][j]
 }
