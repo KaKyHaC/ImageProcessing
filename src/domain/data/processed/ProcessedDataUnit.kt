@@ -17,4 +17,17 @@ data class ProcessedDataUnit(
         if (baseArray.size != height)
             throw Exception("invalid base array size")
     }
+
+    class Builder {
+        var firstElement: Int? = null
+        var code: BigInteger? = null
+        var baseArray: ShortArray? = null
+        var signMatrix: SignMatrix? = null
+        var width: Int? = null
+        var height: Int? = null
+
+        fun build(): ProcessedDataUnit {
+            return ProcessedDataUnit(firstElement, code!!, baseArray!!, signMatrix!!, width!!, height!!)
+        }
+    }
 }
