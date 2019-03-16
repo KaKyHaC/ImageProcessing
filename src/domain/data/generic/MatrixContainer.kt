@@ -1,6 +1,6 @@
 package domain.data.generic
 
-open class MatrixContainer<T> (private val data: MutableList<T>) {
+open class MatrixContainer<T> (private val data: List<T>) {
     val dimension: Int
         get() = data.size
 
