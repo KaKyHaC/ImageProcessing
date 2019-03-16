@@ -1,5 +1,6 @@
 package domain.data.processed
 
+import domain.data.subtype.SignMatrix
 import java.math.BigInteger
 
 data class ProcessedDataUnit(

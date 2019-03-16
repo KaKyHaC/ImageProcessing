@@ -1,4 +1,4 @@
-package domain.data.processed
+package domain.data.subtype
 
 import domain.data.generic.Matrix
 
