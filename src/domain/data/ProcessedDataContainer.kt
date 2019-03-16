@@ -1,4 +1,6 @@
 package domain.data
 
-class ProcessedDataContainer {
-}
+import domain.data.generic.MatrixContainer
+
+class ProcessedDataContainer(data: List<ProcessedDataMatrix>) :
+    MatrixContainer<ProcessedDataMatrix>(data)
