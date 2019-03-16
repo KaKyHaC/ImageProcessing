@@ -1,6 +1,6 @@
-package model.modules
+package domain.module
 
-import model.data.IData
+import domain.data.IData
 
 interface IModule {
     fun direct(data: IData): IData

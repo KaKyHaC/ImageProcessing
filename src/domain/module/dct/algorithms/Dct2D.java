@@ -1,4 +1,4 @@
-//package model.modules.dct.algorithms;
+//package domain.module.dct.algorithms;
 //
 //import static java.lang.Math.cos;
 //import static java.lang.Math.sqrt;

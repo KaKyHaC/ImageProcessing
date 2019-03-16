@@ -1,7 +1,7 @@
-package model.modules.dct
+package domain.module.dct
 
-import model.data.IData
-import model.modules.IModule
+import domain.data.IData
+import domain.module.IModule
 
 class ModuleDCT : IModule {
 

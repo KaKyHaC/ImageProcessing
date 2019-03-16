@@ -1,4 +1,4 @@
-package model.data
+package domain.data
 
 interface IData: Iterable<Short> {
 }

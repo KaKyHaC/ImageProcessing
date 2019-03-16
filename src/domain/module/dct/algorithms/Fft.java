@@ -1,4 +1,4 @@
-package model.modules.dct.algorithms;
+package domain.module.dct.algorithms;
 
 /*
  * Free FFT and convolution (Java)
