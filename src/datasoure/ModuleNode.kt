@@ -2,7 +2,7 @@ package datasoure
 
 import domain.module.IModule
 
-class ModuleNode<InputType, OutputType>(val module: IModule<InputType, OutputType>) {
+abstract class ModuleNode<InputType, OutputType>(val module: IModule<InputType, OutputType>) {
     private var invokeNext: ((OutputType) -> Unit)? = null
 
     fun direct(data: InputType) {
