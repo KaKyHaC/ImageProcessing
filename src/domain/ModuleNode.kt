@@ -4,10 +4,10 @@ import domain.data.IData
 import domain.module.IModule
 
 class ModuleNode<InputType : IData, OutputType : IData>(val module: IModule<InputType, OutputType>) {
-    var nextNode: ModuleNode<OutputType, IData>? = null
+    var invokeNext: ((OutputType) -> Unit)? = null
 
-    fun direct(data: InputType): IData {
+    fun direct(data: InputType) {
         val res = module.direct(data)
-        return nextNode?.direct(res) ?: res
+        invokeNext?.invoke(res)
     }
 }
