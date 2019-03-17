@@ -1,5 +1,6 @@
 package domain
 
+import datasoure.ModuleNode
 import domain.module.IModule
 import org.junit.Test
 
