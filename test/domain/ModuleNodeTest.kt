@@ -18,6 +18,16 @@ class ModuleNodeTest{
         node.direct(14)
     }
 
+    class Factory{
+        fun create(value:Int): Any{
+            return when(value) {
+                0 -> IntStringModule()
+                1 -> StringStringModule("factory")
+                else -> StringPrintModule()
+            }
+        }
+    }
+
     class IntStringModule : IModule<Int, String> {
         override fun direct(data: Int): String {
             return data.toString()
