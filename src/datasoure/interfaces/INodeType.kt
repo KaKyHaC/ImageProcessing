@@ -1,0 +1,3 @@
+package datasoure.interfaces
+
+interface INodeType

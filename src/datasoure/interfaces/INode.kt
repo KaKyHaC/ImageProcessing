@@ -1,4 +1,4 @@
-package datasoure.frame
+package datasoure.interfaces
 
 interface INode {
     fun getFactory(): INodeFactory
