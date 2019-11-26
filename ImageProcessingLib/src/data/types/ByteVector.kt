@@ -1,5 +1,7 @@
 package data.types
 
+import constants.Constants
+
 /**
  * Non save class
  * Iterator for Array<Byte>
@@ -24,7 +26,7 @@ class ByteVector : Iterable<Byte> {
 
     private fun growToIndex(i: Int) {
         if (i < size) return
-        else data.addAll(List(i - size) { 0 })
+        else data.addAll(List(i - size + 1) { Constants.ZERO_BYTE })
     }
 
 
