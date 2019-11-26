@@ -7,11 +7,18 @@ import java.nio.ByteBuffer;
 class BitBufferTest {
 
     @Test
-    void writeBits() {
+    void writeBit() {
+        Data[] dataArray = new Data[1];
+        dataArray[0] = new Data(2, 8);
+        testQueue(dataArray, 65);
+    }
+
+    @Test
+    void write2Bits() {
         Data[] dataArray = new Data[2];
-        dataArray[0] = new Data(2,8);
-        dataArray[1] = new Data(2,8);
-        testQueue(dataArray , 65);
+        dataArray[0] = new Data(2, 8);
+        dataArray[1] = new Data(2, 8);
+        testQueue(dataArray, 65);
     }
 
     void testQueue(Data[] dataArray, int bufferSize) {
