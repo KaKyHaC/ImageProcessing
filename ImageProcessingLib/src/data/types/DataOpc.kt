@@ -1,4 +1,4 @@
-package data.primitives
+package data.types
 
 import data.interfaces.IByteVector
 import data.interfaces.ICopyable

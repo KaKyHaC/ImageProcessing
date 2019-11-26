@@ -3,7 +3,7 @@ package data.primitives
 import data.interfaces.IByteVector
 import data.interfaces.ISavable
 
-class Flag2 constructor() : ISavable {
+class Flag constructor() : ISavable {
     private val data = mutableMapOf<Parameter, Boolean>()
 
     constructor(vector: IByteVector) : this() {
