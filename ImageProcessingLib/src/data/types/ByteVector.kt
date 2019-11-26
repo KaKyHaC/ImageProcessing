@@ -3,31 +3,23 @@ package data.types
 import constants.Constants
 
 /**
- * Non save class
- * Iterator for Array<Byte>
+ * Save class
+ * Iterator for ArrayList<Byte>
  */
-class ByteVector : Iterable<Byte> {
+class ByteVector : ArrayList<Byte>() {
 
-    private val data = mutableListOf<Byte>()
-
-    val size get() = data.size
-
-    override fun iterator() = data.iterator()
-
-    operator fun get(i: Int): Byte {
-        growToIndex(i)
-        return data[i]
+    override operator fun get(index: Int): Byte {
+        growToIndex(index)
+        return super.get(index)
     }
 
-    operator fun set(i: Int, value: Byte) {
-        growToIndex(i)
-        data[i] = value
+    override operator fun set(index: Int, element: Byte): Byte {
+        growToIndex(index)
+        return super.set(index, element)
     }
 
     private fun growToIndex(i: Int) {
         if (i < size) return
-        else data.addAll(List(i - size + 1) { Constants.ZERO_BYTE })
+        else addAll(List(i - size + 1) { Constants.ZERO_BYTE })
     }
-
-
 }
