@@ -6,7 +6,7 @@ interface IByteVector : Iterable<Byte> {
 
     val size get() = bytes.size
 
-    fun append(value: Long, bitLength: Int)
+    fun writeBits(value: Long, bitLength: Int)
 
-    fun getBits(bitLength: Int, position: Int?): Long
+    fun readBits(bitLength: Int, position: Int?): Long
 }

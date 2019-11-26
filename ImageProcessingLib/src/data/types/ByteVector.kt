@@ -23,11 +23,11 @@ class ByteVector : IByteVector {
     override val bytes: ByteArray
         get() = data.toByteArray()
 
-    override fun append(value: Long, bitLength: Int) {
+    override fun writeBits(value: Long, bitLength: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getBits(bitLength: Int, position: Int?): Long {
+    override fun readBits(bitLength: Int, position: Int?): Long {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
