@@ -5,7 +5,9 @@ import data.interfaces.ISavable
 
 data class Size(val width: Short, val height: Short) : ISavable {
 
-    constructor(vector: IByteVector) : this(0,0) {
+    constructor(width: Int, height: Int) : this(width.toShort(), height.toShort())
+
+    constructor(vector: IByteVector) : this(0, 0) {
         TODO()
     }
 
