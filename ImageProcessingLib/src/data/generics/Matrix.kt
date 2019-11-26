@@ -9,7 +9,7 @@ class Matrix<T>(
 ) : IMatrix<T>, ICopyable<Matrix<T>> {
 
     constructor(size: Size, init: (i: Int, j: Int) -> T) : this(
-        MutableList(size.width) { i -> MutableList(size.height) { j -> init(i, j) } }
+        MutableList(size.width.toInt()) { i -> MutableList(size.height.toInt()) { j -> init(i, j) } }
     )
 
     override fun get(i: Int, j: Int) = matrix.getOrNull(i)?.getOrNull(j)
@@ -23,10 +23,10 @@ class Matrix<T>(
     }
 
     override fun <R> mapIndexed(invoke: (i: Int, j: Int, value: T) -> R) = Matrix(
-        MutableList(width) { i -> MutableList(height) { j -> invoke(i, j, get(i,j)!!) } }
+        MutableList(width) { i -> MutableList(height) { j -> invoke(i, j, get(i, j)!!) } }
     )
 
-    override fun copy() = mapIndexed {i, j, value -> if (value is ICopyable<*>) value.copy() as T else value }
+    override fun copy() = mapIndexed { i, j, value -> if (value is ICopyable<*>) value.copy() as T else value }
 
     override val width: Int
         get() = matrix.size
