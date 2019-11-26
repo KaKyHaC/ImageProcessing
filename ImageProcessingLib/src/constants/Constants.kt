@@ -1,4 +1,4 @@
-package ImageCompressionLib.Constants
+package constants
 
 import java.math.BigInteger
 

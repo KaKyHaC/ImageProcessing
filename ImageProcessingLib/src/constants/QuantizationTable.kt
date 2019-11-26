@@ -1,4 +1,4 @@
-package ImageCompressionLib.Constants
+package constants
 
 /**
  * Created by Димка on 08.08.2016.
@@ -29,6 +29,7 @@ object QuantizationTable {
 
 
     private var smart: Array<ShortArray>? = null
+
     private var smartValue: Int = 0
 
     private fun initSmart(value: Int) {

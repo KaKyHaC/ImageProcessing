@@ -1,4 +1,4 @@
-package ImageCompressionLib.Constants
+package constants
 
 object DctTable {
     private val directDctTable = arrayOf(
