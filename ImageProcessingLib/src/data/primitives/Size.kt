@@ -1,16 +1,15 @@
 package data.primitives
 
-import data.interfaces.ISavable
 import data.interfaces.IByteVector
+import data.interfaces.ISavable
 
 data class Size(val width: Short, val height: Short) : ISavable {
 
-    constructor(vector: IByteVector) : this(
-        vector.getNextShort()?.toInt() ?: 0,
-        vector.getNextShort()?.toInt() ?: 0
-    )
+    constructor(vector: IByteVector) : this(0,0) {
+        TODO()
+    }
+
     override fun appendByteVector(vector: IByteVector) {
-        vector.append(width.toShort())
-        vector.append(height.toShort())
+        TODO()
     }
 }

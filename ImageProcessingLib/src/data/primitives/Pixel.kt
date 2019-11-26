@@ -26,7 +26,7 @@ abstract class Pixel private constructor(
     }
 
     override fun appendByteVector(vector: IByteVector) {
-        dataList.forEach { vector.append(it) }
+        TODO()
     }
 
     override fun calculateDeviation(other: Pixel) = dataList

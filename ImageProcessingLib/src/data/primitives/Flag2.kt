@@ -7,9 +7,7 @@ class Flag2 constructor() : ISavable {
     private val data = mutableMapOf<Parameter, Boolean>()
 
     constructor(vector: IByteVector) : this() {
-        data.primitives.Flag2.Parameter.values().forEach {
-            setChecked(it, vector.getNextBoolean() ?: false)
-        }
+        //TODO()
     }
 
     fun isChecked(param: Parameter) = data.get(param) ?: false
@@ -21,15 +19,12 @@ class Flag2 constructor() : ISavable {
     fun setFalse(parameter: Parameter) = setChecked(parameter, false)
 
     override fun appendByteVector(vector: IByteVector) {
-        data.primitives.Flag2.Parameter.values().forEach { vector.append(isChecked(it)) }
+        TODO()
     }
 
     enum class Parameter {
         OneFile, Enlargement, DC, LongCode, GlobalBase, Password, Steganography, Alignment, CompressionUtils, Quantization, Encryption, DCT;
 
         fun getBinaryValue() = Math.pow(2.0, values().indexOf(this).toDouble())
-
     }
-
-
 }
