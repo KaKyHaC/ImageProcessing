@@ -1,40 +1,31 @@
 package data.types
 
-import constants.Constants
-import data.interfaces.IByteVector
-import java.nio.ByteBuffer
-
 /**
  * Non save class
  * Iterator for Array<Byte>
  */
-class ByteVector : IByteVector {
-
-    private val byteBuffer = ByteBuffer.allocate(Constants.BYTES_PER_LONG)
+class ByteVector : Iterable<Byte> {
 
     private val data = mutableListOf<Byte>()
 
-    var byteIndex = 0
-        private set
-
-    var bitIndex = 0
-        private set
-
-    override val bytes: ByteArray
-        get() = data.toByteArray()
-
-    override fun writeBits(value: Long, bitLength: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun readBits(bitLength: Int, position: Int?): Long {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    val size get() = data.size
 
     override fun iterator() = data.iterator()
 
-    fun resetIterator() {
-        bitIndex = 0
-        byteIndex = 0
+    operator fun get(i: Int): Byte {
+        growToIndex(i)
+        return data[i]
     }
+
+    operator fun set(i: Int, value: Byte) {
+        growToIndex(i)
+        data[i] = value
+    }
+
+    private fun growToIndex(i: Int) {
+        if (i < size) return
+        else data.addAll(List(i - size) { 0 })
+    }
+
+
 }
